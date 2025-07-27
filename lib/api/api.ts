@@ -1,13 +1,33 @@
 import axios from "axios";
-import { Post } from "@/types/types";
+import { PostsResponse, Post, fetchParams } from "@/types/types";
 
-const baseURL = "http://localhost:3000/api";
+const baseURL = "https://jsonplaceholder.typicode.com";
 
 const apiServer = axios.create({ baseURL });
 
-export async function fetchPosts() {
-    const res = await apiServer.get<Post[]>("/posts");
-    return res.data;
+export async function fetchPosts(page?: number, limit?: number) {
+    const params: fetchParams = {};
+
+    if (page !== undefined) {
+        params._page = page;
+    }
+
+    if (limit !== undefined) {
+        params._limit = limit;
+    }
+
+    const response = await apiServer.get<Post[]>("/posts", {
+        params,
+    });
+
+    const result: PostsResponse = {
+        data: response.data,
+        headers: {
+            xTotalCount: response.headers["x-total-count"],
+        },
+    };
+
+    return result;
 }
 
 export async function fetchPostById(id: number) {

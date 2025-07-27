@@ -1,6 +1,10 @@
 {
     "About": {
         "title": "About us",
-        "content": "This is content abou our team"
+        "content": "Welcome to our website — a space where words, thoughts, and inspiration live. We created this platform for those who value quality content, sincere stories, and deep reflections. Here you will find publications on a variety of topics — from everyday observations to profound analytical articles. Our team consists of authors, researchers, and simply curious people who strive to share knowledge, emotions, and experiences. We don’t chase sensations — we seek meaning. Our texts are created to inspire, inform, and provoke thought. Thank you for being with us — reading, thinking, and asking questions."
+    },
+    "Navigation": {
+        "LinkHome": "Home",
+        "LinkAbout": "About"
     }
 }

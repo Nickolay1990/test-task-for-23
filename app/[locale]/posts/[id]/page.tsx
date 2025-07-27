@@ -5,8 +5,9 @@ interface PostDetailsProps {
 }
 
 export async function generateStaticParams() {
-    const posts = await fetchPosts();
-    return posts.map((post) => {
+    const response = await fetchPosts();
+
+    return response.data.map((post) => {
         return { id: String(post.id) };
     });
 }
