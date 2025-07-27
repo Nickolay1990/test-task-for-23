@@ -5,8 +5,6 @@ interface ErrorProps {
 }
 
 export default function Error({ error }: ErrorProps) {
-    console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", error.message);
-
     return (
         <>
             <h1>Oops! Error!!!</h1>

@@ -1,8 +1,11 @@
+import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
+import Navigation from "../Navigation/Navigation";
+
 export default function Header() {
     return (
-        <header>
-            <button>EN</button>
-            <button>UK</button>
-        </header>
+        <>
+            <Navigation />
+            <LocaleSwitcher />
+        </>
     );
 }

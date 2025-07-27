@@ -1,0 +1,10 @@
+.loader {
+    color: orange;
+    text-align: center;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
