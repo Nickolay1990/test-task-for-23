@@ -1,28 +1,28 @@
 import { fetchPosts } from "@/lib/api/api";
-import Link from "next/link";
 import Pagination from "../Pagination/Pagination";
+import PostListItem from "../PostListItem/PostListItem";
 
-interface PostListProps {
+interface PostContentProps {
     page: number;
 }
 
-export default async function PostList({ page }: PostListProps) {
+export default async function PostContent({ page }: PostContentProps) {
     const res = await fetchPosts(page);
     const totalCount = Number(res.headers.xTotalCount);
-
     return (
         <>
             {res && (
                 <section>
-                    <ul>
-                        {res.data.map((post) => (
-                            <li key={post.id}>
-                                <h4>{`${post.title[0].toUpperCase()}${post.title.slice(1)}`}</h4>
-                                <Link href={`/posts/${post.id}`}>Read more</Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <Pagination totalCount={totalCount} currentPage={Number(page)} />
+                    {res && (
+                        <>
+                            <ul>
+                                {res.data.map((post) => (
+                                    <PostListItem post={post} key={post.id} />
+                                ))}
+                            </ul>
+                            <Pagination totalCount={totalCount} currentPage={Number(page)} />
+                        </>
+                    )}
                 </section>
             )}
         </>

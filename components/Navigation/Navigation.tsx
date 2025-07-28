@@ -1,11 +1,7 @@
-"use client";
-
 import { Link } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 export default function Navigation() {
-    const { locale } = useParams();
     const t = useTranslations("Navigation");
 
     return (

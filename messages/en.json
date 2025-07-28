@@ -6,5 +6,28 @@
     "Navigation": {
         "LinkHome": "Home",
         "LinkAbout": "About"
+    },
+    "Footer": {
+        "Copyright": "by Bogdanovich Kolia (2025)"
+    },
+    "Post": {
+        "Button": "Read more"
+    },
+    "Switcher": {
+        "uk": "Ukrainian",
+        "en": "English"
+    },
+    "Metadata": {
+        "title": "Posts on popular topics",
+        "description": "Explore a variety of posts on important topics. From ideas to insights — discover content that informs, inspires, and captivates.",
+        "alt": "Blogger-style image"
+    },
+    "AboutMetadata": {
+        "title": "About us",
+        "description": "Text about our team",
+        "alt": "Blogger-style image"
+    },
+    "Error": {
+        "title": "Oops! Error!!!"
     }
 }
