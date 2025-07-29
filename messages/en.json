@@ -40,5 +40,8 @@
     },
     "Loader": {
         "title": "Loading, please wait..."
+    },
+    "Home": {
+        "title": "Posts"
     }
 }

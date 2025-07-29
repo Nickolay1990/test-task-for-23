@@ -1,3 +1,17 @@
 .nav {
     color: rgb(85, 226, 128);
+    font-weight: 700;
+    display: flex;
+    gap: 40px;
+}
+
+.link {
+    transition: 250ms;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.link:hover {
+    color: rgb(99, 247, 0);
+    border: 1px solid rgb(99, 247, 0);
 }

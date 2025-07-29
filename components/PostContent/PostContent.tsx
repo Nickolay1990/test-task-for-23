@@ -1,6 +1,7 @@
 import { fetchPosts } from "@/lib/api/api";
 import Pagination from "../Pagination/Pagination";
 import PostListItem from "../PostListItem/PostListItem";
+import css from "./PostContent.module.css";
 
 interface PostContentProps {
     page: number;
@@ -13,7 +14,7 @@ export default async function PostContent({ page }: PostContentProps) {
         <>
             {res && (
                 <section>
-                    <ul>
+                    <ul className={css.list}>
                         {res.data.map((post) => (
                             <PostListItem post={post} key={post.id} />
                         ))}

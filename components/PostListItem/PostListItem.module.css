@@ -1,0 +1,25 @@
+.item {
+    flex-basis: calc((100% - (4 * 15px)) / 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(7, 236, 76);
+    padding: 5px;
+    min-height: 125px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.link {
+    color: rgb(85, 226, 128);
+    transition: 250ms;
+}
+
+.link:hover {
+    color: rgb(99, 247, 0);
+    font-weight: 700;
+    border: 1px solid rgb(99, 247, 0);
+}

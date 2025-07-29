@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import css from "./Pagination.module.css";
 
 interface PaginationProps {
     totalCount: number;
@@ -11,11 +12,15 @@ export default function Pagination({ totalCount, currentPage }: PaginationProps)
 
     for (let i = 1; i <= countPages; i++) {
         if (currentPage === i) {
-            renderLinks.push(<li key={i}>{i}</li>);
+            renderLinks.push(
+                <li className={`${css.active} ${css.item}`} key={i}>
+                    {i}
+                </li>
+            );
             continue;
         }
         renderLinks.push(
-            <li key={i}>
+            <li className={css.item} key={i}>
                 <Link href={`/?page=${i}`}>{i}</Link>
             </li>
         );
@@ -23,16 +28,16 @@ export default function Pagination({ totalCount, currentPage }: PaginationProps)
 
     return (
         <div>
-            <ul>
+            <ul className={css.list}>
                 {currentPage > 1 && (
-                    <li>
+                    <li className={css.item}>
                         <Link href={`/?page=${currentPage - 1}`}>&lt;&lt;</Link>
                     </li>
                 )}
                 {renderLinks}
 
                 {currentPage * 10 < totalCount && (
-                    <li>
+                    <li className={css.item}>
                         <Link href={`/?page=${currentPage + 1}`}>&gt;&gt;</Link>
                     </li>
                 )}

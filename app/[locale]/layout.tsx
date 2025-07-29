@@ -5,6 +5,8 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import Container from "@/components/Container/Container";
+import css from "./page.module.css";
 
 interface generateMetadataProps {
     params: Promise<{ locale: string }>;
@@ -50,10 +52,10 @@ export default async function RootLayout({
     }
 
     return (
-        <>
+        <Container>
             <Header />
-            <main>{children}</main>
+            <main className={css.main}>{children}</main>
             <Footer />
-        </>
+        </Container>
     );
 }

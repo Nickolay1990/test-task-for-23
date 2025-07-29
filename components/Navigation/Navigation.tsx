@@ -6,13 +6,17 @@ export default function Navigation() {
     const t = useTranslations("Navigation");
 
     return (
-        <nav className={css.nav}>
-            <ul>
+        <nav>
+            <ul className={css.nav}>
                 <li>
-                    <Link href="/">{t("LinkHome")}</Link>
+                    <Link className={css.link} href="/">
+                        {t("LinkHome")}
+                    </Link>
                 </li>
                 <li>
-                    <Link href="/about">{t("LinkAbout")}</Link>
+                    <Link className={css.link} href="/about">
+                        {t("LinkAbout")}
+                    </Link>
                 </li>
             </ul>
         </nav>

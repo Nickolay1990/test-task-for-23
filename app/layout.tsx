@@ -5,7 +5,7 @@ import { Roboto_Mono } from "next/font/google";
 
 const roboto = Roboto_Mono({
     subsets: ["latin", "cyrillic"],
-    weight: ["400", "700"],
+    weight: ["200", "400", "700"],
     variable: "--roboto",
     display: "swap",
 });

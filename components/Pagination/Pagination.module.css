@@ -1,0 +1,22 @@
+.list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.item {
+    border: 1px solid rgb(7, 236, 76);
+    padding: 5px;
+    transition: 250ms;
+}
+
+.active {
+    color: rgb(181, 219, 193);
+    border: 1px solid rgb(181, 219, 193);
+}
+
+.item:hover {
+    color: rgb(181, 219, 193);
+    border: 1px solid rgb(181, 219, 193);
+}
