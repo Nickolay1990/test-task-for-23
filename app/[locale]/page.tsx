@@ -1,4 +1,4 @@
-import PostContent from "@/components/PostList/PostList";
+import PostContent from "@/components/PostContent/PostContent";
 
 interface HomeProps {
     searchParams: Promise<{ page: string }>;

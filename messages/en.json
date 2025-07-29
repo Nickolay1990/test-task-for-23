@@ -28,6 +28,17 @@
         "alt": "Blogger-style image"
     },
     "Error": {
-        "title": "Oops! Error!!!"
+        "title": "Oops! Error!!!",
+        "content": "Something went wrong, you will be redirected to another page in 3 seconds."
+    },
+    "NotFound": {
+        "title": "Oops! Page Not Found",
+        "contentBefore": "We`re sorry, but the page you`re looking for doesn`t exist. It might have been removed, renamed, or is temporarily unavailable. Please check the URL for mistakes, or go back to the",
+        "contentLink": "homepage",
+        "contentAfter": "to continue browsing.",
+        "alt": "Blogger-style image"
+    },
+    "Loader": {
+        "title": "Loading, please wait..."
     }
 }

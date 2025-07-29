@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PostDetailsProps): Promise<Me
                     url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoEUeD4nFk4f97q5nfhWnb4YJ0RNbyeci2PA&s",
                     width: 1200,
                     height: 630,
-                    alt: "Note Details",
+                    alt: "Post Details",
                 },
             ],
         },

@@ -5,9 +5,9 @@ body {
 }
 
 body {
-    color: wheat;
-    background: black;
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(7, 236, 76);
+    background: rgb(5, 0, 12);
+    font-family: var(--roboto);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -21,10 +21,4 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
 }

@@ -1,4 +1,4 @@
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header/Header";
@@ -50,14 +50,10 @@ export default async function RootLayout({
     }
 
     return (
-        <html lang={locale}>
-            <body>
-                <NextIntlClientProvider>
-                    <Header />
-                    <main>{children}</main>
-                    <Footer />
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </>
     );
 }

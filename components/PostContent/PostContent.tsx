@@ -13,16 +13,12 @@ export default async function PostContent({ page }: PostContentProps) {
         <>
             {res && (
                 <section>
-                    {res && (
-                        <>
-                            <ul>
-                                {res.data.map((post) => (
-                                    <PostListItem post={post} key={post.id} />
-                                ))}
-                            </ul>
-                            <Pagination totalCount={totalCount} currentPage={Number(page)} />
-                        </>
-                    )}
+                    <ul>
+                        {res.data.map((post) => (
+                            <PostListItem post={post} key={post.id} />
+                        ))}
+                    </ul>
+                    <Pagination totalCount={totalCount} currentPage={Number(page)} />
                 </section>
             )}
         </>
