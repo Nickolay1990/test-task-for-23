@@ -1,25 +1,45 @@
 .item {
-    flex-basis: calc((100% - (4 * 15px)) / 5);
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid rgb(7, 236, 76);
     padding: 5px;
-    min-height: 125px;
 }
 
 .title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 400;
 }
 
 .link {
     color: rgb(85, 226, 128);
     transition: 250ms;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid transparent;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
     color: rgb(99, 247, 0);
     font-weight: 700;
     border: 1px solid rgb(99, 247, 0);
+}
+
+@media screen and (min-width: 768px) {
+    .item {
+        flex-basis: calc((100% - 15px) / 2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .item {
+        flex-basis: calc((100% - (4 * 15px)) / 5);
+        padding: 5px;
+        min-height: 195px;
+    }
+    .title {
+        margin-bottom: 20px;
+    }
 }

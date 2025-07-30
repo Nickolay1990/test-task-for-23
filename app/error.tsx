@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import css from "./error.module.css";
 
 interface ErrorProps {
     error: Error;
@@ -15,10 +16,10 @@ export default function Error({ error }: ErrorProps) {
         router.push("/about");
     }, 3000);
     return (
-        <>
-            <h1>{t("title")}</h1>
-            <p>{t("content")}</p>
-            <p>{error.message}</p>
-        </>
+        <div className={css.errorWrapper}>
+            <h1 className={css.errorTitle}>{t("title")}</h1>
+            <p className={css.errorContent}>{t("content")}</p>
+            <p className={css.errorMessage}>{error.message}</p>
+        </div>
     );
 }

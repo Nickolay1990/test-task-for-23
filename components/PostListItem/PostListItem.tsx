@@ -13,7 +13,7 @@ export default function PostListItem({ post }: PostListItemProps) {
         <li key={post.id} className={css.item}>
             <h4 className={css.title}>{`${post.title[0].toUpperCase()}${post.title.slice(1)}`}</h4>
             <Link className={css.link} href={`/posts/${post.id}`}>
-                {t("Button")}
+                <span>{t("Button")}</span>
             </Link>
         </li>
     );

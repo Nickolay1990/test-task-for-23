@@ -1,0 +1,36 @@
+.errorTitle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.errorContent {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.errorMessage {
+    text-align: center;
+}
+
+.errorWrapper {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid;
+    padding: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    .errorWrapper {
+        width: 500px;
+        padding: 20px;
+    }
+    .errorTitle {
+        margin-bottom: 20px;
+    }
+    .errorContent {
+        margin-bottom: 20px;
+    }
+}

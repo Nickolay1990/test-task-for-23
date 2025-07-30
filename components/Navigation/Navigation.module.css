@@ -2,16 +2,27 @@
     color: rgb(85, 226, 128);
     font-weight: 700;
     display: flex;
-    gap: 40px;
+    gap: 10px;
+    word-spacing: -5;
 }
 
 .link {
     transition: 250ms;
-    padding: 5px;
+    padding: 0;
     border: 1px solid transparent;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
     color: rgb(99, 247, 0);
     border: 1px solid rgb(99, 247, 0);
+}
+
+@media screen and (min-width: 1200px) {
+    .nav {
+        gap: 40px;
+    }
+    .link {
+        padding: 5px;
+    }
 }

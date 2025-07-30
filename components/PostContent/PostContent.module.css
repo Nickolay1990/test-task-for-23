@@ -1,6 +1,12 @@
 .list {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+    .list {
+        margin-bottom: 30px;
+    }
 }

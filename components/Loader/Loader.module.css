@@ -1,10 +1,18 @@
 .loader {
-    color: orange;
+    color: rgb(7, 236, 76);
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .wrapper {
-    width: 500px;
+    width: 200px;
     margin: 0 auto;
-    padding: 100px 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        width: 500px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
 }

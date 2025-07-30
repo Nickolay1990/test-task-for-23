@@ -7,10 +7,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Container from "@/components/Container/Container";
 import css from "./page.module.css";
-
-interface generateMetadataProps {
-    params: Promise<{ locale: string }>;
-}
+import { generateMetadataProps } from "@/types/types";
 
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
@@ -26,10 +23,10 @@ export async function generateMetadata({ params }: generateMetadataProps): Promi
         openGraph: {
             title: t("title"),
             description: t("description"),
-            url: `https://08-zustand-beige.vercel.app`,
+            url: `https://test-task-for-23.vercel.app/en`,
             images: [
                 {
-                    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoEUeD4nFk4f97q5nfhWnb4YJ0RNbyeci2PA&s",
+                    url: "https://elements-resized.envatousercontent.com/elements-video-cover-images/c9281ff4-b96e-428b-beb3-2d0df6839886/video_preview/video_preview_0000.jpg?w=500&cf_fit=cover&q=85&format=auto&s=e174f28b93f911e52fa867fc7d75d0448864d4b640d905055c6f1a266b76cf07",
                     width: 1200,
                     height: 630,
                     alt: t("alt"),

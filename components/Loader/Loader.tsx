@@ -11,7 +11,7 @@ export default function Loader() {
                 cssOverride={{
                     display: "block",
                     margin: "0 auto",
-                    backgroundColor: "red",
+                    backgroundColor: "rgb(99, 247, 0)",
                     width: "500px",
                 }}
             />

@@ -1,7 +1,22 @@
 .container {
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 10px;
     min-height: 100vh;
+    max-width: 375px;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 20px;
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 30px;
+        max-width: 100%;
+    }
 }

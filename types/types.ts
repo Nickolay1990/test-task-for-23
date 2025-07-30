@@ -16,3 +16,7 @@ export interface fetchParams {
     _page?: number;
     _limit?: number;
 }
+
+export interface generateMetadataProps {
+    params: Promise<{ locale: string }>;
+}
